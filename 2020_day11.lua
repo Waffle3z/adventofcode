@@ -1,5 +1,5 @@
 local grid = {}
-for v in getinput():gmatch("[^\n]+") do
+for v in input:gmatch("[^\n]+") do
 	local row = {}
 	for i = 1, #v do
 		row[i] = v:sub(i, i)
@@ -50,8 +50,6 @@ local grid2 = grid
 
 while true do -- part 1
 	local copy = {}
-	copy[0] = {}
-	copy[#copy+1] = {}
 	for i = 1, #grid do
 		copy[i] = {}
 		for j = 1, #grid[i] do
@@ -86,8 +84,6 @@ end
 grid = grid2 -- part 2
 while true do
 	local copy = {}
-	copy[0] = {}
-	copy[#copy+1] = {}
 	for i = 1, #grid do
 		copy[i] = {}
 		for j = 1, #grid[i] do
