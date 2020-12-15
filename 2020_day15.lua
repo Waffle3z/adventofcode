@@ -7,7 +7,7 @@ for i=1,#t-1 do last[t[i]] = i end
 local lastn, lastv = t[#t], #t
 for i = #t+1, 30000000 do
 	local n = t[#t]
-	if last[n] and last[n] ~= #t then
+	if last[n] then
 		t[#t+1] = #t - last[n]
 	else
 		t[#t+1] = 0
